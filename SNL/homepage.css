@@ -1,0 +1,452 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Viga;
+}
+
+/* Toggle Hamburger */
+
+.menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.menu-wrapper .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 3;
+  padding: 30px 30px;
+}
+
+.menu-wrapper .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 30px;
+  z-index: 2;
+}
+
+.menu-wrapper .hamburger > span {
+  position: absolute;
+  height: 3px;
+  width: 35px;
+  background-color: black;
+}
+
+.menu-wrapper .hamburger > span:before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0px;
+  height: 3px;
+  width: 35px;
+  background-color: black;
+}
+
+.menu-wrapper .hamburger > span:after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 0px;
+  height: 3px;
+  width: 35px;
+  background-color: black;
+}
+
+.menu-wrapper .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: ease-in .4s;
+  
+}
+
+.menu-wrapper .menu > div {
+  height: 200vh;
+  width: 200vw;
+  border-radius: 50%;
+  display: flex;
+  flex: none;
+  transition: all ease-in .4s;
+}
+
+.menu-wrapper .menu > div {
+  height: 200vh;
+  width: 200vw;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, rgb(172, 13, 172) 30%, rgb(255, 51, 241) 80%);
+  display: flex;
+  flex: none;
+  transition: all ease-in .4s;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+}
+
+.menu-wrapper .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-width: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+} 
+
+.menu-wrapper .menu ul {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.menu-wrapper .menu ul li {
+  text-transform: uppercase;
+  margin: 40px 0px;
+  font-size: 1.3em;
+}
+
+.menu-wrapper .menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-wrapper .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrapper .toggler:checked ~ .menu > div{
+  transform: scale(1);
+  transition: ease .5s;
+}
+
+.menu-wrapper .toggler:checked ~ .menu > div > div{
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* /Toggle Hamburger */
+
+/* Nav-Bar*/
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 15px 15px;
+}
+
+.nav-link {
+  padding: 0px 15px;
+  text-transform: uppercase;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: rgb(192, 14, 192);
+}
+
+/* /Nav-Bar*/
+
+/* Main */ 
+
+.main{
+  height: 100vh;
+  width: 100%;
+  background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+
+.header{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transform: rotateY(180deg);
+  overflow: hidden;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+}
+
+.heading{
+  display: flex;
+  text-emphasis: center;
+  text-transform: uppercase;
+  color: white;
+  width: 100%;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  font-size: 2.8em;
+  text-shadow: black 2px 4px 4px;
+  overflow-wrap: normal;
+  /* -webkit-text-stroke: 1px;
+ -webkit-text-stroke-color: black; */
+}
+
+.heading span {
+  color: rgb(192, 14, 192);
+  font-size: 1.1em
+ /* -webkit-text-stroke: 0.2px;
+ -webkit-text-stroke-color: black; */
+}
+
+.about-heading {
+  padding: 0px 20px;
+  font-size: 1em;
+}
+
+.aboutpodcast {
+  color: white;
+  /* text-shadow: black 1px 2px 1px; */
+}
+
+.header-buttons {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.btnheader {
+  border: black solid 2px;
+  padding: 8px;
+  border-radius: 40px;
+  color: white;
+  background: transparent;
+  font-size: 1em;
+  width: 200px;
+  margin: 0px 12px;
+  text-transform: uppercase;
+  box-shadow: black 2px 3px 5px;
+  cursor: pointer;
+}
+
+.subscribe {
+  background-image: linear-gradient(to right, rgb(192, 14, 192) 30%, rgb(255, 51, 241) 80%);
+}
+
+/* Main */
+
+main {
+  width: 100%;
+}
+
+.podcastepisodes {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  padding-top: 15px;
+}
+
+.g-background-default {
+  background-color: rgb;
+}
+
+.swiper-slide {
+  box-shadow: black 2px;
+  margin: 0px 50px;
+}
+
+iframe {
+  border: rgb(253, 12, 145) 3px solid;
+  background-color: pink;
+  box-shadow: rgba(231, 28, 123) 1px 3px 2px;
+  border-radius: 10px;
+
+}
+
+.title {
+  font-size: 1em;
+  text-align: center;
+  /* max-width: 200px; */
+  text-transform: uppercase;
+}
+
+/* Submit to the Show Input */
+
+.showsubmission {
+  width: 100%;
+  margin-top: 30px;
+  padding: 15px 50px;
+  background-image: linear-gradient(to right, rgba(231, 28, 123) 30%, rgb(165, 5, 154) 80%);
+}
+
+.row-1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: stretch;
+}
+
+.col-1 {
+  /* max-width: 45%; */
+}
+
+.submitheader,
+.ideashow {
+  color: black;
+  text-transform: uppercase;
+}
+
+.submitheader{
+  background-color: rgb(192, 14, 192);
+  padding: 0px 50px;
+  text-align: center;  
+}
+
+.submitheader::after {
+  content: '';
+  position: relative;
+  bottom: 20px;
+}
+
+.col-2{
+  margin: 0 auto;
+  padding: 15px 15px;
+}
+
+.name, 
+.email {
+  width: 200px;
+  height: 30px;
+  margin-bottom: 10px;
+  border: black solid 2px;
+  box-shadow: black 2px 3px 4px;
+}
+
+.messages {
+  display: block;
+  resize: vertical;
+  width: 410px;
+}
+
+.showbtn {
+  height: 30px;
+  width: 410px;
+  border-radius: 40px;
+  margin-top: 10px;
+  color: white;
+  border: black 2px solid;
+  background-color: transparent;
+  text-transform: uppercase;
+  box-shadow: black 3px 2px 3px;
+
+}
+
+/* Section About Co-Hosts */
+
+.about{
+  /* display: flex; */
+  text-align: center;
+  padding: 25px 50px;
+}
+
+.images{
+  display: flex;
+  justify-content: center;
+}
+
+.cohost {
+  text-transform: uppercase;
+  color: rgb(231, 28, 123);
+}
+
+.photo img {
+  height: 175px;
+  width: 175px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0px 10px;
+  border: rgb(231, 28, 123) 5px solid;
+}
+
+.introname {
+  text-transform: uppercase;
+  color: rgb(165, 5, 154);
+  position: relative;
+}
+
+.introname:after{
+  content: '';
+  position: absolute;
+  height: 2.5px;
+  width: 30px;
+  background-color: rgb(172, 13, 172);
+  left: 42%;
+  bottom: 0;
+}
+
+.introtext {
+  padding-top: 20px;
+}
+
+
+/* Footer */
+
+footer{
+  text-align: center;
+  background-image: linear-gradient(to right, rgba(231, 28, 123) 30%, rgb(165, 5, 154) 80%);
+}
+
+.nlheader{
+  text-transform: uppercase;
+  padding-top: 15px;
+  font-size: 25px;
+}
+
+.inputfooter input {
+  height: 30px;
+  width: 350px;
+  border: solid black 2px;
+}
+
+.inputfooter button {
+  height: 30px;
+  width: 200px;
+  border-radius: 40px;
+  margin-top: 10px;
+  border: black 2px solid;
+  background-color: transparent;
+  text-transform: uppercase;
+  box-shadow: black 3px 2px 3px;
+  color: white;
+}
+
+.icon {
+  font-size: 25px;
+  margin: 10px 10px;
+  color: white;
+}
+
+.divide {
+  opacity: 0.5;
+}
+
+.copywrite {
+  text-transform: uppercase;
+}
